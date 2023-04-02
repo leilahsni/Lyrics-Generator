@@ -1,0 +1,154 @@
+#artist-input-field {
+	width:70%;
+	margin:auto;
+	text-align:center;
+}
+
+#artist-input-field label {
+	font-family: Arial, Helvetica;
+	font-size:30px;
+	color:#4A4E69;
+}
+
+#artist-input-field input {
+	border-radius: 2px;
+	width:100%;
+	margin-top:15px;
+}
+
+#artist-input-field input#artist-placeholder {
+	height:50px;
+	border:0;
+	font-size:30px;
+	text-align:center;
+	border:2px solid #B7BACC;
+	color:#4A4E69;
+}
+
+#artist-input-field input#artist-placeholder:is(:hover, :focus, :active) {
+    border:2px solid #68b7f2;
+    outline:none !important;
+}
+
+#artist-input-field input#artist-placeholder::placeholder {
+    opacity: 0.3;
+    color: grey;
+}
+
+#artist-input-field input#artist-placeholder:focus::placeholder {
+	color:transparent;
+}
+
+#artist-input-field input#generate-button {
+	height:50px;
+	background-color: #4A4E69;
+	color:white;
+	display: inline-block;
+  border: none;
+  padding: 15px 0px 15px 0px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size:18px;
+  cursor: pointer;
+}
+
+#artist-input-field #param-form {
+	font-size:15px;
+	width:100%;
+	margin: 10px 0px 0px 0px;
+	font-family: Arial, Helvetica;
+	text-align:left;
+	position:relative;
+}
+
+#artist-input-field #param-form label {
+	font-size:15px;
+}
+
+#artist-input-field #param-form div#param-button {
+	font-size:15px;
+	border:none;
+	margin-bottom:5px;
+	background-color:#bed9ed;
+	border-radius: 3px;
+	color:#4d697d;
+	padding:5px 15px 5px 15px;
+	cursor:pointer;
+	width:100px;
+}
+
+#artist-input-field #param-form div#model-parameters-input-field {
+	margin:auto;
+	visibility: hidden;
+	position:relative;
+}
+
+#artist-input-field #param-form div#model-parameters-input-field .model-para-input[type=number] {
+	width:5%;
+	outline:none !important;
+	border:2px solid #bed9ed;
+	border-radius:3px;
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px;
+}
+
+#artist-input-field #param-form div#model-parameters-input-field .model-para-input[type=text] {
+	width:14%;
+	outline:none !important;
+	border:2px solid #bed9ed;
+	border-radius:3px;
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px;
+}
+
+#artist-input-field #param-form div#model-parameters-input-field .model-para-input:is(:hover, :focus, :active) {
+	border:2px solid #68b7f2;
+	border-radius:3px;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
+  	padding: 5px;
+}
+
+#message-display {
+	margin:auto;
+	font-family: Arial, Helvetica;
+	font-size:15px;
+}
+
+div#message-display:empty { 
+    display: none;
+}
+
+div#generation-output {
+	position:relative;
+	height:auto !important;
+	width:80%;
+	top:-250px;
+	left:30%;
+}
+
+div#generation-output p#generation {
+	position: absolute;
+	padding:30px;
+	margin:0 auto;
+	width:50%;
+	border-radius: 5px;
+	height:auto !important;
+	height:40%;
+	background-color: #bed9ed;
+	color:#4d697d;
+	margin-bottom:50px;
+	line-height:2.5;
+	text-align: center;
+	font-family: Arial, Helvetica;
+	font-size:15px;
+}
+
+div#generation-output p#generation:empty { 
+    display: none;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>🎶 Song Lyrics Generator</title>
+    <link href="{{ url_for('static', path='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='css/main.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1 id='main-title'><a href='#'>🎶 Song Lyrics Generator</a></h1>
+
+
+    <form id="artist-input-field" action="http://127.0.0.1:8000/request" method="POST">
+        <label>Write the name of your favorite artist :</label>
+        <input type="text" id="artist-placeholder" name="artist_name" placeholder="Example : Elvis Costello & The Attractions">
+        <input type="submit" id="generate-button" name="generate" value="Generate Lyrics">
+
+        <div id='param-form'>
+            <div onclick="toggleDown('model-parameters-input-field')" id="param-button">Parameters ▼</div>
+            <br>
+            <div id="model-parameters-input-field">
+                <label>Number of songs to be considered by the model for the fine-tuning (min. 5) :</label>
+                <br>
+                <input type="number" id="max-songs" name="max_songs" class="model-para-input" min="5" max="200" value="5">
+                <br><br>
+                <label>Number of iterations through the dataset (min. 10) :</label>
+                <br>
+                <input type="number" name="epochs" id="epochs" class="model-para-input" min="10" max="200" value="10">
+                <br><br>
+                <label>Model :</label>
+                <br><br>
+                <select type="text" id="model-choice" name="model" class="model-para-input">
+                    <option value="base">Pre-trained base model</option>
+                    <option value="gpt2">GPT2</option>
+                    <option value="hmm">Hidden Markov Chain</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <div id='message-display'>
+    </div>
+
+    <div id="generation-output" style="white-space: pre-line;">
+        <p id='generation'>{{ generation }}</p>
+    </div>
+
+    <script src="{{ url_for('static', path='js/script.js') }}" type="application/javascript"></script>
+</body>
+</html>
